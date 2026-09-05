@@ -6,18 +6,29 @@
 
 :root{
     --bg: #dfe7f5;
-    --header: rgba(223, 231, 245, 0.82);
+    --hero-bg: linear-gradient(160deg, #24294a, #171B34);
+    --header: linear-gradient(to right, #e9ebf2, #d9d9ea);
 
-    --navy: #252b49;
-    --navy-light: #343863;
-    --yellow: #fbb900;
+    --dark-blue: #232849;
+    --gray: #5B647E;
+    --dark-line: #3d415b;
+
+
+    --light-gray: #C8CEE2;
+    --yellow: #F5AF00;
+
+    --gold: #9d740b;
 
     --white: #ffffff;
 }
 
 body{
     background-color: var(--bg);
-    font-family: "Manrope", sans-serif;
+    font-family: "Golos Text", sans-serif;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* -------- HEADER --------- */
@@ -31,17 +42,14 @@ header{
     width: 100%;
     padding: 16px 0;
     background: var(--header);
-    
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 5px 30px rgba(37, 43, 73, 0.08);
+
 }
 
-nav{
-    width: 80%;
+.header-nav{
+    width: 75%;
     max-width: 1400px;
     margin: 0 auto;
+    color: var(--dark-blue);
 
     display: flex;
     justify-content: space-between;
@@ -52,7 +60,7 @@ nav{
 .logo-container{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .logo{
@@ -60,103 +68,140 @@ nav{
     height: 60px;
 }
 
-.text-logo{
-    height: 55px;
-    width: auto;
+.logo-text{
+    max-width: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.school-levels{
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.school-name{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-nav a{
+    color: var(--dark-blue);
 }
 
 .nav-links{
+    list-style: none;
+    white-space: nowrap;
+
     display: flex;
     align-items: center;
-    gap: 8px;
-}
+    gap: 25px;
 
-.nav-links a{
-    text-decoration: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
-
-    transition:
-        color 0.25s ease,
-        background-color 0.25s ease,
-        transform 0.25s ease;
-
 }
 
-.nav-links.light a{
-    color: var(--navy);
-    padding: 8px 12px;
+.nav-btns, .hero-btns{
+    display: flex;
+    gap: 15px;
 }
-
-
-.nav-links.light a:hover{
-    color: var(--navy-light);
-    opacity: 0.6;
-}
-
-.nav-links.dark a{
-    color: var(--white);
-    padding: 9px 22px;
+.nav-btns a, .hero-btns a{
+    padding: 15px 25px;
     border-radius: 30px;
-    background-color: var(--navy);
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-.nav-links.dark a:hover{
-    background-color: var(--navy-light);
-    transform: translateY(-2px);
+.nav-btns a.light{
+    border: 1px solid var(--dark-blue);
 }
+
+.nav-btns a.dark{
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
 
 /* -------- HERO SECTION --------- */
-
+.container{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .hero-sec{
     width: 100%;
     height: 100vh;
+    padding-top: 80px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 
     color: var(--white);
-    background-image:
-        linear-gradient(to bottom, rgba(25, 30, 55, 0.55), rgba(15, 17, 25, 0.45)),
-        url("./images/school-bg.png");
-
-    background-size: cover;
-    background-position: center;
+    background: var(--hero-bg);
 }
 
-.title-container{
-    width: 100%;
-    max-width: 950px;
-    padding: 0 30px;
-    text-align: center;
+.hero-content{
+    max-width: 60%;
 }
 
-
-.title-container h3{
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    opacity: 0.9;
-    margin-bottom: 18px;
-}
-
-.title-container hr{
-    border: none;
-    width: 70px;
-    height: 3px;
-    margin: 24px auto 5px;
-    background-color: var(--yellow);
-    border-radius: 10px;
-}
-
-
-.title-container h1{
-    font-size: clamp(42px, 5vw, 72px);
-    line-height: 1.1;
+.hero-title{
     font-weight: 700;
-    letter-spacing: -2px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    font-size: clamp(32px, 6vw, 48px);
+}
+
+.hero-parag{
+    color: var(--light-gray);
+    margin: 25px 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.hero-btns a.yellow{
+    background-color: var(--yellow);
+    color: var(--dark-blue);
+}
+
+.hero-btns a.transparent{
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.hero-sec hr{
+    margin: 40px 0 25px;
+    border: none;
+    background-color: var(--dark-line);
+    height: 0.5px;
+}
+
+.stat{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-right: 1px solid var(--gold);
+    padding: 0 40px 10px 0;
+    margin-right: 40px;
+}
+
+.stat:last-child{
+    border: none;
+}
+
+.stat strong{
+    color: var(--yellow);
+    font-size: 32px;
+}
+
+.stat span{
+    color: var(--light-gray);
+}
+
+.hero-stats{
+    display: flex;
+}
+
+.school{
+    height: 400px;
 }
 
 
