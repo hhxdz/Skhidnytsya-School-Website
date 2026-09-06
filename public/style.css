@@ -21,6 +21,9 @@
 
     --gold: #9d740b;
 
+    --light-blue: #0095CD;
+    --green: #00955D;
+
     --white: #ffffff;
 
     --frame-border: 3px solid var(--yellow);
@@ -36,6 +39,7 @@
     --li-gap: 20px;
 
     --font: "Golos Text", sans-serif;
+    --p-line-height: 1.7;
 }
 
 body{
@@ -186,7 +190,7 @@ header{
     color: var(--light-gray);
     margin: 25px 0;
     font-size: 18px;
-    line-height: 1.7;
+    line-height: var(--p-line-height);
 }
 
 .hero-btns a.yellow{
@@ -254,7 +258,7 @@ header{
 
 .about-content p{
     color: var(--gray);
-    line-height: 1.7;
+    line-height: var(--p-line-height);
 }
 .about-parag:first-of-type{
     margin: 20px 0 10px;
@@ -445,3 +449,66 @@ textarea.form-input{
     font-size: 16px;
     cursor: pointer;
 }
+
+/* -------- EDUCATION SECTION -------- */
+
+#education-sec{
+    margin: 0 auto;
+    padding: var(--sec-padding);
+    width: var(--container-width);
+}
+
+.edu-parag{
+    color: var(--gray);
+    line-height: var(--p-line-height);
+    margin: 20px 0;
+    max-width: 50%;
+}
+
+.edu-levels{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.edu-levels li{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    
+    flex: 1;
+
+    color: var(--gray);
+}
+.edu-levels li.first-lvl{
+    border-top: 4px solid var(--yellow);
+}
+.edu-levels li.second-lvl{
+    border-top: 4px solid var(--light-blue);
+}
+.edu-levels li.third-lvl{
+    border-top: 4px solid var(--green);
+}
+
+.edu-levels li h4{
+    font-weight: 700;
+    color: var(--dark-blue);
+    font-size: 22px;
+    margin: 10px 0 5px;
+}
+
+.edu-levels li h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.edu-levels li span{
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.edu-levels li p{
+    line-height: var(--p-line-height);
+}
+
