@@ -30,6 +30,8 @@
     --frame-size: 50px;
 
     --svg-size: 30px;
+    --s-svg-size: 25px;
+
     --svg-stroke: 2;
 
     --sec-padding: 80px 0;
@@ -461,7 +463,7 @@ textarea.form-input{
 .edu-parag{
     color: var(--gray);
     line-height: var(--p-line-height);
-    margin: 20px 0;
+    margin: 20px 0 45px;
     max-width: 50%;
 }
 
@@ -594,7 +596,7 @@ textarea.form-input{
     color: var(--gray);
     line-height: var(--p-line-height);
     max-width: 50%;
-    margin: 20px 0 30px;
+    margin: 20px 0 45px;
 }
 
 .doc-list{
@@ -659,4 +661,115 @@ textarea.form-input{
     border: 1px solid var(--dark-blue);
     color: var(--dark-blue);
     font-weight: 600;
+}
+
+
+/* ---- ENVIROMENT SECTION ---- */
+
+#environment-sec{
+    margin: 0 auto;
+    padding: var(--sec-padding);
+    width: var(--container-width);
+}
+
+.environment-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.environment-features{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--li-gap);
+
+    width: 55%;
+}
+
+.environment-features li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: var(--li-gap);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.environment-features li:last-child{
+    padding: 0;
+    border-bottom: 0;
+}
+
+.icon-container{
+    height: 45px;
+    width: 45px;
+
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.icon-container.yellow{
+    background-color: #fac02e1f;
+}
+
+.icon-container.blue{
+    background-color: #1ec3ff1f;
+}
+
+.icon-container.green{
+    background-color: #0cc07b1f;
+}
+
+.feature-description{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.feature-description span{
+    color: var(--gray);
+    line-height: var(--p-line-height);
+}
+
+.feature-description h3{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.environment-img{
+    width: 380px;
+    height: 460px;
+    background-color: lightblue;
+}
+
+.environment-img-container{
+    padding: 20px;
+    position: relative;
+}
+
+.environment-img-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--frame-size);
+    height: var(--frame-size);
+    border-top: var(--frame-border);
+    border-left: var(--frame-border);
+}
+
+.environment-img-container::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: var(--frame-size);
+    height: var(--frame-size);
+    border-right: var(--frame-border);
+    border-bottom: var(--frame-border);
 }
