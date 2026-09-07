@@ -30,6 +30,7 @@
     --frame-size: 50px;
 
     --svg-size: 30px;
+    --svg-stroke: 2;
 
     --sec-padding: 80px 0;
 
@@ -250,7 +251,6 @@ header{
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    font-size: 16px;
 }
 .about-content{
     max-width: 50%;
@@ -535,7 +535,7 @@ textarea.form-input{
 .news{
     display: flex;
     gap: 40px;
-    margin-top: 30px;
+    margin-top: 20px;
 
     list-style: none;
 }
@@ -581,3 +581,82 @@ textarea.form-input{
     margin-top: auto;
 }
 
+
+/* ------ DOCUMENTS SECTION ------ */
+
+#documents-sec{
+    margin: 0 auto;
+    padding: var(--sec-padding);
+    width: var(--container-width);
+}
+
+.docs-parag{
+    color: var(--gray);
+    line-height: var(--p-line-height);
+    max-width: 50%;
+    margin: 20px 0 30px;
+}
+
+.doc-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--li-gap);
+}
+
+.doc-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--li-gap);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.doc-list li:last-child{
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.left-doc-block{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.doc-description{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.doc-description span{
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.doc-description h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.download-container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.download-container span{
+    font-size: 14px;
+    padding: 7px 14px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.download-container a{
+    padding: var(--btn-padding);
+    border-radius: var(--btn-border-radius);
+    border: 1px solid var(--dark-blue);
+    color: var(--dark-blue);
+    font-weight: 600;
+}
