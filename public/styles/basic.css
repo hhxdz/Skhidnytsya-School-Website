@@ -245,3 +245,41 @@ header{
     background-color: var(--dark-blue);
     color: var(--white);
 }
+
+
+/* ----- BANNER ----- */
+
+.banner{
+    width: 100%;
+    padding: 60px 0;
+    background: var(--hero-bg);
+    margin-top: 80px;
+    color: #7b85a1;
+}
+
+.banner-content{
+    margin: 0 auto;
+    width: var(--container-width);
+    display: flex;
+    flex-direction: column;
+}
+
+.back-link{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--light-gray);
+    margin-bottom: 30px;
+}
+
+.banner-title{
+    font-size: clamp(28px, 5vw, 38px);
+    margin: 15px 0;
+    color: var(--white);
+}
+
+.banner-parag{
+    width: var(--sec-desc-width);
+    line-height: var(--p-line-height);
+    color: var(--light-gray);
+}
