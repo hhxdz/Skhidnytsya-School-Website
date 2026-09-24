@@ -46,6 +46,8 @@
 
 
     /* other */
+    --inp-border-radius: 10px;
+    --inp-padding: 15px 20px;
 
     --card-gap: 45px;
 
@@ -55,6 +57,10 @@
     --p-line-height: 1.7;
 
     --sec-desc-width: 50%; 
+}
+
+html{
+    overflow-y: scroll;
 }
 
 body{
