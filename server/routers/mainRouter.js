@@ -27,6 +27,10 @@ mainRouter.get('/login', (req, res)=>{
     res.sendFile(path.join(__dirname, '../../pages', 'login.html'))
 })
 
+mainRouter.get('/reset-password', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../../pages', 'reset-pass.html'))
+})
+
 
 
 

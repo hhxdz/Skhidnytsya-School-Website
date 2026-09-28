@@ -6,7 +6,7 @@
     <title>Східницький ЗЗСО I-III рівнів</title>
 
     <link rel="stylesheet" href="styles/basic.css">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/reset-pass.css">
     <link rel="stylesheet" href="styles/auth.css">
 
     <!-- Fonts -->
@@ -17,7 +17,7 @@
 <body>
     <header>
         <nav class="header-nav">
-            <a href="/" class="logo-container">
+            <a href="#hero-sec" class="logo-container">
                 <img src="images/logo-crop.png" alt="Логотип смт Східниця" class="logo">
                 <div class="logo-text">
                     <span class="school-name">Східницький ЗЗСО</span>
@@ -26,7 +26,7 @@
             </a>
             <ul class="nav-links">
                 <li>
-                    <a href="/#about-sec" class="nav-link">
+                    <a href="#about-sec" class="nav-link">
                         Про заклад
                         <span class="arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" width="var(--arrow-size)" height="var(--arrow-size)" viewBox="0 0 24 24" fill="none" stroke="var(--dark-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
@@ -51,7 +51,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/#education-sec" class="nav-link">
+                    <a href="#education-sec" class="nav-link">
                         Освіта
                         <span class="arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" width="var(--arrow-size)" height="var(--arrow-size)" viewBox="0 0 24 24" fill="none" stroke="var(--dark-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
@@ -76,7 +76,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/#environment-sec" class="nav-link">
+                    <a href="#environment-sec" class="nav-link">
                         Середовище
                         <span class="arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" width="var(--arrow-size)" height="var(--arrow-size)" viewBox="0 0 24 24" fill="none" stroke="var(--dark-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
@@ -101,7 +101,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/#news-sec" class="nav-link">
+                    <a href="#news-sec" class="nav-link">
                         Новини
                         <span class="arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" width="var(--arrow-size)" height="var(--arrow-size)" viewBox="0 0 24 24" fill="none" stroke="var(--dark-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
@@ -121,7 +121,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/#documents-sec" class="nav-link">
+                    <a href="#documents-sec" class="nav-link">
                         Документи
                         <span class="arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" width="var(--arrow-size)" height="var(--arrow-size)" viewBox="0 0 24 24" fill="none" stroke="var(--dark-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
@@ -146,7 +146,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/#contacts-sec" class="nav-link">
+                    <a href="#contacts-sec" class="nav-link">
                         Контакти
                         <span class="arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" width="var(--arrow-size)" height="var(--arrow-size)" viewBox="0 0 24 24" fill="none" stroke="var(--dark-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
@@ -168,47 +168,30 @@
             </ul>
             <div class="nav-btns">
                 <a href="/login" class="light">Увійти</a>
-                <a href="/#contacts-sec" class="dark">Зв'язатися</a>
+                <a href="#contacts-sec" class="dark">Зв'язатися</a>
             </div>
         </nav>
     </header>
-    <section id="login-sec" class="auth-section">
-        <div class="auth-container">
-            <div class="form-type">
-                <button type="button" class="login form-switch active" data-form="login-form">Вхід</button>
-                <button type="button" class="activation form-switch" data-form="activation-form">Активація запрошення</button>
+    <main>
+        <section id="reset-pass-sec" class="auth-section">
+            <div class="auth-container">
+                <h2 class="sec-title">Скинути пароль</h2>
+                <p class="instruction top">
+                    Введіть адресу електронної пошти, яку ви використовували під час реєстрації.
+                    Ми надішлемо на неї посилання для встановлення нового пароля.
+                </p>
+                <form class="email-form">
+                    <label for="email-inp">Електронна пошта</label>
+                    <input type="email" name="email" id="email-inp" class="form-inp" placeholder="example@gmail.com" autocomplete="email" required>
+                    <button type="submit" class="submit-btn">Надіслати посилання</button>
+                </form>
+                <p class="instruction bottom">
+                    Не маєте доступу до пошти або не отримували запрошення? Зверніться до 
+                    адміністрації через сторінку <a href="/#contacts-sec" class="inline-link">«Контакти»</a> — вам видадуть новий код запрошення
+                </p>
+                <a href="/login" class="auth-link">Повернутися до входу</a>
             </div>
-            <form class="auth-form" id="login-form">
-                <label for="login-email">Електронна пошта</label>
-                <input type="email" name="email" id="login-email" class="form-inp" placeholder="example@gmail.com" required>
-                
-                <label for="login-password">Пароль</label>
-                <input type="password" name="password" id="login-password" class="form-inp" placeholder="Введіть пароль" required>
-            
-                <a href="/reset-password" class="forgot-pass auth-link">Забули пароль?</a>
-
-                <button type="submit" class="submit-btn">Увійти</button>
-            </form>  
-            <form class="auth-form hidden" id="activation-form">
-                <label for="activation-full-name">ПІБ</label>
-                <input type="text" name="fullName" id="activation-full-name" class="form-inp" placeholder="Кароліна Олександрівна Якубець" required>
-
-                <label for="activation-email">Електронна пошта</label>
-                <input type="email" name="email" id="activation-email" class="form-inp" placeholder="example@gmail.com" autocomplete="email" required>
-                
-                <label for="activation-password">Пароль</label>
-                <input type="password" name="password" id="activation-password" class="form-inp" placeholder="Введіть пароль" required>
-
-                <label for="confirm-password">Повторіть пароль</label>
-                <input type="password" name="confirmPassword" id="confirm-password" class="form-inp" placeholder="Повторіть пароль" required>
-
-                <button type="submit" class="submit-btn">Активувати</button>
-            </form>   
-        </div>
-        
-    </section>
-
-
-    <script src="scripts/form-switch.js"></script>
+        </section>
+    </main>
 </body>
 </html>
