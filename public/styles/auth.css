@@ -1,17 +1,34 @@
+#auth-logo-container{
+    margin-bottom: 40px;
+}
+
+#auth-logo{
+    height: 80px;
+    width: 80px;
+}
+
+#auth-school-name{
+    font-size: 20px;
+}
+
+#auth-school-levels{
+    font-size: 16px;
+}
+
 .auth-section{
-    padding: var(--sec-padding);
+    padding: 50px 0;
     
-    max-width: var(--container-width);
+    width: min(100%, 400px);
     margin: 0 auto;
     min-height: 100vh;
-
+    
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .auth-container{
-    width: min(100%, 400px);
-    margin-top: 70px;
+    width: 100%;
 }
 
 .form-inp{
@@ -24,13 +41,24 @@
     font-size: 14px;
 }
 
+.link-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#auth-back-link{
+    margin: 0;
+    color: var(--gray);
+}
+
 .auth-link{
     position: relative;
 
-    align-self: flex-end;
     color: var(--dark-blue);
     padding-bottom: 5px;
-    font-size: 14px;
 }
 
 .auth-link::after{
